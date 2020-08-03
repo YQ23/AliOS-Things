@@ -1,6 +1,9 @@
 {
     "aliosStudio.inner.yosBin": "aos",
     "aliosStudio.hardware.board": "developerkit",
-    "aliosStudio.name": "helloworld",
-    "aliosStudio.isAosSource": true
+    "aliosStudio.name": "mqttapp",
+    "aliosStudio.isAosSource": true,
+    "files.associations": {
+        "netmgr.h": "c"
+    }
 }

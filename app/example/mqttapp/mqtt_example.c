@@ -11,20 +11,20 @@
 #include "iot_export.h"
 #include "app_entry.h"
 
-#define PRODUCT_KEY             "a1MZxOdcBnO"
-#define PRODUCT_SECRET          "h4I4dneEFp7EImTv"
-#define DEVICE_NAME             "test_01"
-#define DEVICE_SECRET           "t9GmMf2jb3LgWfXBaZD2r3aJrfVWBv56"
+#define PRODUCT_KEY             "a1b2E6hgf3f"
+#define PRODUCT_SECRET          "ks0Kn0XwCUcar3O8"
+#define DEVICE_NAME             "developkit"
+#define DEVICE_SECRET           "0a90298e6862da167f70fb97e289c173"
 
 char __product_key[PRODUCT_KEY_LEN + 1];
 char __device_name[DEVICE_NAME_LEN + 1];
 char __device_secret[DEVICE_SECRET_LEN + 1];
-
+//添加user
 /* These are pre-defined topics */
-#define TOPIC_UPDATE            "/"PRODUCT_KEY"/"DEVICE_NAME"/update"
-#define TOPIC_ERROR             "/"PRODUCT_KEY"/"DEVICE_NAME"/update/error"
-#define TOPIC_GET               "/"PRODUCT_KEY"/"DEVICE_NAME"/get"
-#define TOPIC_DATA              "/"PRODUCT_KEY"/"DEVICE_NAME"/data"
+#define TOPIC_UPDATE            "/"PRODUCT_KEY"/"DEVICE_NAME"/user/update"
+#define TOPIC_ERROR             "/"PRODUCT_KEY"/"DEVICE_NAME"/user/update/error"
+#define TOPIC_GET               "/"PRODUCT_KEY"/"DEVICE_NAME"/user/get"
+#define TOPIC_DATA              "/"PRODUCT_KEY"/"DEVICE_NAME"/user/data"
 
 /* These are pre-defined topics format*/
 #define TOPIC_UPDATE_FMT            "/%s/%s/update"
@@ -215,7 +215,7 @@ int mqtt_client(void)
         goto do_exit;
     }
 
-    EXAMPLE_TRACE("\n publish message: \n topic: %s\n payload: \%s\n rc = %d", TOPIC_UPDATE, topic_msg.payload, rc);
+    EXAMPLE_TRACE("\n publish message: \n topic: %s\n payload: %s\n rc = %d", TOPIC_UPDATE, topic_msg.payload, rc);
 
     /* Subscribe the specific topic */
     rc = IOT_MQTT_Subscribe(pclient, TOPIC_DATA, IOTX_MQTT_QOS1, _demo_message_arrive, NULL);
@@ -241,7 +241,7 @@ int mqtt_client(void)
     topic_msg.payload_len = strlen(msg_pub);
 
     rc = IOT_MQTT_Publish(pclient, TOPIC_DATA, &topic_msg);
-    EXAMPLE_TRACE("\n publish message: \n topic: %s\n payload: \%s\n rc = %d", TOPIC_DATA, topic_msg.payload, rc);
+    EXAMPLE_TRACE("\n publish message: \n topic: %s\n payload: %s\n rc = %d", TOPIC_DATA, topic_msg.payload, rc);
 
     IOT_MQTT_Yield(pclient, 200);
 

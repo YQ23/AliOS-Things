@@ -10,6 +10,7 @@
 #include <aos/aos.h>
 #include <aos/yloop.h>
 #include "netmgr.h"
+#include "netmgr_wifi.h"
 #include "app_entry.h"
 
 #ifdef AOS_ATCMD

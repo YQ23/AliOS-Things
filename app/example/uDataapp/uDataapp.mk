@@ -1,6 +1,7 @@
 NAME := uDataapp
 $(NAME)_SOURCES :=   uData-example.c
 
+dtc = 1
 
 ifeq ($(dtc),1)
 

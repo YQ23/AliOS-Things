@@ -26,10 +26,10 @@
 #define EVENT_ERROR_OUTPUT_INFO_IDENTIFIER "ErrorCode"
 
 // for demo only
-#define PRODUCT_KEY             "b1GadfPW0om"
-#define PRODUCT_SECRET          "V3wlnzQsouSxk34S"
-#define DEVICE_NAME             "AliOS_Things_Sensor_01"
-#define DEVICE_SECRET           "mMB0Dy0tnbSIy95Z3dNT1iFZIW7sDEOs"
+#define PRODUCT_KEY             "a1b2E6hgf3f"
+#define PRODUCT_SECRET          "ks0Kn0XwCUcar3O8"
+#define DEVICE_NAME             "developkit"
+#define DEVICE_SECRET           "0a90298e6862da167f70fb97e289c173"
 
 
 #define EXAMPLE_TRACE(fmt, ...)                        \

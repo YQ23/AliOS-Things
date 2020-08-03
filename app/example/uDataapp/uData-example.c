@@ -13,6 +13,7 @@
 
 #ifdef DATA_TO_CLOUD
 #include "netmgr.h"
+#include "netmgr_wifi.h"
 #include "iot_export.h"
 #include "app_entry.h"
 
